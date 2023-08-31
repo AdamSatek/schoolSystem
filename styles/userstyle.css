@@ -1,0 +1,369 @@
+/* ***************************** LOGIN ***************** */
+
+.loginForm {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+
+.loginForm div {
+    width: 300px;
+    height: 200px;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 20px;
+    text-align: center;
+}
+
+.loginForm div input {
+    width: 80%;
+    margin-top: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+    font-family: 'Solitreo';
+    font-size: 20px;
+}
+
+.loginForm div button {
+    width: 50%;
+    margin-top: 30px;
+    font-family: 'Solitreo';
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ************************* PROFILE ********************* */
+/* ************ MENU ************ */
+
+nav {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100vw;
+
+}
+
+nav ul {
+    width: 100%;
+    background-color: green;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    
+    
+    padding: 5px 10px;
+    text-align: center;
+    
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ¸************ PROFILE PAGE ************ */
+
+#profile {
+    padding-top: 130px;
+    transition: all .3s;
+}
+
+#profile #generatePDF {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background-color: green;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile #apologyBtn {
+    position: fixed;
+    top: 160px;
+    right: 20px;
+    background-color: green;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile #apologyForm textarea {
+    width: 300px;
+    height: 200px;
+    resize: none;
+    display: block;
+    margin: auto;
+    
+}
+
+#profile #apologyForm button {
+    width: 300px;
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px auto;
+    display: block;
+
+    
+}
+
+#profile .warningBlock {
+    width: 80vw;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#profile .warningBlock .warning {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: red;
+}
+
+#profile .warningBlock .warning p {
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#profile .warningBlock .warning .warningTimestamp {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    font-size: 9px;
+}
+
+#profile h3 {
+    font-size: 25px;
+    font-family: 'Fredericka the Great';
+    text-align: center;
+    margin: 20px;
+}
+
+
+#profile .gradeBlock {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-collapse: collapse;
+    flex-wrap: wrap;
+}
+
+#profile .gradeBlock table {
+    margin: 20px;
+    padding: 20px;
+    /* border: 3px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#profile .gradeBlock table th {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 3px solid black;
+}
+
+#profile .gradeBlock table td {
+    font-size: 25px;
+    padding: 5px 10px;
+    border-bottom: 1px solid black;
+}
+
+#profile .gradeBlock table td .gradeDate {
+    font-size: 10px;
+    
+    
+}
+
+#profile .rateBlock {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-collapse: collapse;
+    flex-wrap: wrap;
+}
+
+#profile .rateBlock table {
+    margin: 20px;
+    padding: 20px;
+    /* border: 3px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#profile .rateBlock table th {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 3px solid black;
+}
+
+#profile .rateBlock table td {
+    font-size: 25px;
+    padding: 5px 10px;
+    border-bottom: 1px solid black;
+}
+
+#profile .rateBlock table td .rateDate {
+    font-size: 10px;   
+}
+
+/* ¸************ ADD BOX STYLE ************ */
+
+.add-box {
+    
+    width: 100vw;
+    
+    
+    padding-top: 130px;
+    background-color: aqua;
+    
+    overflow: auto;
+    
+}
+
+.add-box h3 {
+    font-family: 'Fredericka the Great';
+    padding: 20px;
+    font-size: 35px;
+    color: black;
+    text-align: center;
+}
+
+.add-box .error {
+    color: red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add-box .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Fredericka the Great';
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 2px 20px 10px 20px;
+    border-radius: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.add-box .closeBtn:hover {
+    
+    background-color: white;
+    color: black;
+    
+}
+
+.add-box form {
+    text-align: center;
+}
+
+.add-box input {
+    width: 300px;
+    margin: 30px auto;
+    padding: 10px;
+    display: block;
+
+}
+
+.add-box select {
+    width: 150px;
+    margin: 30px auto;
+    padding: 10px;
+    display: inline-block;
+    
+}
+
+.add-box textarea {
+    width: 300px;
+    height: 200px;
+    resize: none;
+    margin: 30px auto;
+    padding: 10px;
+    display: block;
+}
+
+.add-box button {
+    width: 300px;
+    margin: 30px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: tomato;
+    display: block;
+    
+}
+
+.add-box table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+
+.add-box table th {
+    padding: 5px 15px;
+    border-bottom: 3px solid black;
+}
+
+.add-box table td {
+    padding: 5px 15px;
+    border-bottom: 1px solid black;
+}
+
+/* ********** TEACHER ********* */
+
+.apologies {
+    padding-top: 160px;
+    padding-bottom: 50px;
+    width: 100vw;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.apologies .apology-table {
+    border-collapse: collapse;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.apologies .apology-table th {
+    padding: 10px 20px;
+    border-bottom: 3px solid black;
+}
+
+.apologies .apology-table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/*********************************************   SCROLLBAR   ************************/
+::-webkit-scrollbar {
+    width: 3px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(41, 101, 73); 
+    width: 10px;
+   
+  }
+
+/********************************** HEADER ****************************/
+
+header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 110px;
+    width: 100vw;
+    
+    background-image: url("../img/Blackboard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+
+header #logo img {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header #menuBtn {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    display: none;
+    
+}
+
+@media screen and (max-width:1070px) {
+    header p a {
+        left: 0;
+        top: 10px;
+        transform: translate(0, 0);
+        text-align: center;
+        font-size: 35px;
+        width: 100%;
+    }
+}
+
+header p a:hover {
+    scale: 1.1;
+}
+
+header ul {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+}
+
+
+
+header ul li {
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+    
+    text-shadow: 0 0 5px black;
+    transition: all .1s;
+    
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredericka the Great';
+    font-size: 15px;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:1070px) {
+    header ul {
+        top: 80%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row-reverse nowrap;
+        
+        
+    }
+
+    
+
+    header ul li {
+        
+        margin: 0 10px;
+        flex-grow: 1;
+       
+        
+    }
+
+    header ul li a {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header ul {
+        top: 100%;
+        transform: translate(50%, 0);
+        width: 90%;
+        flex-direction: column;
+        background-color: black;
+        
+    }
+
+    header #menuBtn {
+        display: block;
+    }
+
+    
+
+    header ul li {
+        z-index: 300;
+        padding: 15px;
+    }
+
+}
+
+header ul li:hover {
+    scale: 1.2;
+}
+
+
+
+
+/********************************** MAIN ****************************/
+main {
+    width: 100vw;
+    text-align: center;
+    font-family: 'Fredericka the Great';
+}
+
+
+
+.front-page {
+    padding: 30px;
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 4;
+    grid-gap: 30px;
+    grid-template-areas: 
+    "front-h front-h"
+    "img-first txt-first"
+    "txt-second img-second"
+    "img-third txt-third";
+}
+
+@media screen and (max-width:900px) {
+    .front-page {
+        padding: 30px;
+        padding-top: 120px;
+        display: block;
+    }
+}
+
+.front-page h2 {
+    grid-area: front-h;
+    font-size: 50px;
+}
+
+@media screen and (max-width:900px) {
+    .front-page h2 {
+        
+        font-size: 5.5vw;
+    }
+}
+
+.front-page .intro-box {
+    
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-first {
+    grid-area: img-first;
+    background-image: url("../img/step.jpg");     
+}
+.txt-first{
+    grid-area: txt-first;
+}
+.img-second {
+    grid-area: img-second;
+    background-image: url("../img/hriste.jpg");     
+}
+.txt-second{
+    grid-area: txt-second;
+}
+.img-third {
+    grid-area: img-third;
+    background-image: url("../img/skola.jpg");     
+}
+.txt-third{
+    grid-area: txt-third;
+}
+
+
+
+
+
+/********************************** NEWS ****************************/
+
+.front-page-news {
+    width: 100vw;
+    height: auto;
+    background-color: tomato;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.front-page-news h2 {
+    font-size: 50px;
+}
+
+.front-page-news a {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.front-page-news .newsContainer {
+    flex: 30%;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width:1100px) {
+    .front-page-news .newsContainer {
+        flex: 100%;
+    }
+}
+
+.front-page-news .newsContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.front-page-news .newsContainer .spendlikImg {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+}
+
+.front-page-news .newsContainer .descNews {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    font-size: 20px;
+
+}
+.front-page-news .newsContainer .descNews .textNews  {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+.front-page-news .newsContainer .descNews .dateNews {
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+/********************************** MENU ****************************/
+
+.menu {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.menu .menuContainer {
+    flex: 50%;
+    padding-bottom: 20px;
+    margin-top: 110px;
+}
+
+.menu .menuContainer iframe {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 20px;
+}
+
+.menu .menuContainer a {
+    background-color: black;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-left: 20px;
+    
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredericka the Great';
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.menu .menuContainer a:hover {
+    background-color: rgb(156, 156, 156);
+    color: rgb(1, 74, 1);
+
+}
+
+/********************************** FOOTER ****************************/
+
+footer {
+    background-image: url("../img/Blackboard.png");
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    font-family: 'Fredericka the Great';
+}
+
+footer div {
+    flex: 33%;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:900px) {
+    footer div {
+        flex: 100%;
+        
+    }
+}
+
+footer div ul {
+    list-style: none;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: all .2s;
+}
+
+footer a:hover {
+    color: rgb(54, 150, 105);
+}
+
+/********************************** CLEARFIX ****************************/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

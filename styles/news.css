@@ -1,0 +1,77 @@
+.news-full {
+    padding: 20px;
+    padding-top: 120px;
+    width: 100vw;
+    height: auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "news-p news-p news-p news-p"
+    "new1 new2 new3 new4"
+    "new5 new6 new7 new8"
+    "new9 new10 new11 new12"
+    "new13 new14 new15 new16";
+}
+
+@media screen and (max-width:900px) {
+    .news-full {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "news-p news-p"
+        "new1 new2"
+        "new3 new"
+        "new5 new6"
+        "new7 new8"
+        "new9 new10"
+        "new11 new12"
+        "new13 new14"
+        "new15 new16";
+    }
+}
+
+.news-full .news-header {
+    grid-area: news-p;
+    color: white;
+    padding: 20px;
+    background-image: url("../img/Blackboard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Fredericka the Great';
+    font-size: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.news-full .newsContainer {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.news-full .newsContainer img {
+    width: 100%;
+}
+
+.news-full .newsContainer .descNews {
+    font-size: 20px;
+    
+    
+}
+
+.news-full .newsContainer .descNews .textNews {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.news-full .newsContainer .descNews .dateNews {
+    font-size: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}

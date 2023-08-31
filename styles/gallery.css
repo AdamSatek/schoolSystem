@@ -1,0 +1,175 @@
+#photogallery {
+    padding: 10px;
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "gallery-p gallery-p gallery-p gallery-p"
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8"
+    "img9 img10 img11 img12"
+    "img13 img14 img15 img16";
+}
+
+@media screen and (max-width:900px) {
+    #photogallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gallery-p gallery-p"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 img10"
+        "img11 img12"
+        "img13 img14"
+        "img15 img16";
+    }
+}
+
+#photogallery .gallery-img {
+    border: 3px solid black;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#photogallery .gallery-header {
+    font-size: 40px;
+    padding: 20px;
+    border: 3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#photogallery .galleryDate {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+}
+
+#photogallery .galleryDesc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: all .2s;
+}
+
+#photogallery .galleryDesc:hover {
+    opacity: 0.8;
+    
+}
+
+
+
+#photogallery p {
+    font-family: 'Fredericka the Great';
+    
+    text-align: center;
+    grid-area: gallery-p;
+    background-image: url("../img/Blackboard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+
+#photogallery .img1 {
+    grid-area: img1;
+}
+#photogallery .img2 {
+    grid-area: img2;
+}
+#photogallery .img3 {
+    grid-area: img3;
+}
+#photogallery .img4 {
+    grid-area: img4;
+}
+#photogallery .img5 {
+    grid-area: img5;
+}
+#photogallery .img6 {
+    grid-area: img6;
+}
+#photogallery .img7 {
+    grid-area: img7;
+}
+#photogallery .img8 {
+    grid-area: img8;
+}
+#photogallery .img9 {
+    grid-area: img9;
+}
+#photogallery .img10 {
+    grid-area: img10;
+}
+#photogallery .img11 {
+    grid-area: img11;
+}
+#photogallery .img12 {
+    grid-area: img12;
+}
+
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.img-window img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+.img-window .arrowLeft {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    height: 80vh;
+    width: 40vw;
+    background-color: transparent;
+
+    z-index: 400;
+}
+
+.img-window .arrowRight {
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+    height: 80vh;
+    width: 40vw;
+    background-color: transparent;
+
+    z-index: 400;
+}
+
+.img-window .close-window{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 350;
+}
