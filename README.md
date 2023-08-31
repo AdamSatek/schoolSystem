@@ -14,3 +14,5 @@ As teacher, you can add grades to students, positive and negative ratings, creat
 
 First user have to be added manually to database, because only teacher can create new user accounts.
 
+Use SQL stored in CreateDatabase file, to set database and create first user.
+
