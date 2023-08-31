@@ -68,3 +68,10 @@ CREATE TABLE apology (
   apology_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (apology_id)
 );
+
+first user:
+username: Admin
+password: 123
+
+INSERT INTO users (user_name, contact_person, email, phone, pwd, user_type, student_group) 
+VALUES ("Admin", "Admin", "admin@admin.com", "1234", "$2y$12$KjM.ZXKK.a91l3Hzwg9Hxe3wV5dumopa.tjW.zBYZM6jQydUZeXAO", "teacher", "0");
